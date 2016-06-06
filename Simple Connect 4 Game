@@ -8,7 +8,7 @@
 #include <algorithm>
 #include <ctime>
 
-// Include random generator
+//This game involves the inclusion of a random generator to act as the second player
 
 using namespace std;
 
@@ -16,6 +16,8 @@ using namespace std;
 const char EMPTY = ' ';
 const char TIE = 'T';
 const char NO_ONE = 'N';
+
+//this starts from the highest numbers, then subtracts to place the item 
 int i = 35;
 int j = 36;
 int k = 37;
@@ -39,7 +41,7 @@ int main()
 	vector<char> GameBoard(table, EMPTY);
 	
 
-	directions();
+	directions(); // calls for the function directions
 	char peasant = 'X';
 	char droid = 'O';
 	connectBoard(GameBoard);
@@ -108,8 +110,6 @@ int randomNumber;
 	srand(static_cast<unsigned int>(time(0)));  //seed random number generator
 	randomNumber = rand() % 7 + 0;         // random number between 1 and 10
 
-
-
 	if (randomNumber == 0)
 	{
 		GameBoard[i] = droid;
@@ -157,7 +157,8 @@ void directions()
 }
 
 void connectBoard(vector<char>& GameBoard)
-{	cout << "\n\t"  << " " << "A" << " "  << " " << "B" << " "  << " "  << " " << "C" <<  " " << " " << " " << "D" << " " << " " << " " << "E" << " " << " " << " " << "F" << " " << " " << "G" ;
+{
+    cout << "\n\t"  << " " << "A" << " "  << " " << "B" << " "  << " "  << " " << "C" <<  " " << " " << " " << "D" << " " << " " << " " << "E" << " " << " " << " " << "F" << " " << " " << "G" ;
     cout << "\n\t" << GameBoard[0] << " | " << GameBoard[1] << " | " << GameBoard[2] << " | " << GameBoard[3] << " | " << GameBoard[4] << " | " << GameBoard[5] << " | " << GameBoard[6];
 	cout << "\n\t" << "-------------------------";
     cout << "\n\t" << GameBoard[7] << " | " << GameBoard[8] << " | " << GameBoard[9] << " | " << GameBoard[10] << " | " << GameBoard[11] << " | " << GameBoard[12] << " | " << GameBoard[13];
@@ -166,10 +167,10 @@ void connectBoard(vector<char>& GameBoard)
     cout << "\n\t" << "-------------------------";
     cout << "\n\t" << GameBoard[21] << " | " << GameBoard[22] << " | " << GameBoard[23] << " | " << GameBoard[24] << " | " << GameBoard[25] << " | " << GameBoard[26] << " | " << GameBoard[27];
 	cout << "\n\t" << "-------------------------";
-	cout << "\n\t" << GameBoard[28] << " | " << GameBoard[29] << " | " << GameBoard[30] << " | " << GameBoard[31] << " | " << GameBoard[32] << " | " << GameBoard[33] << " | " << GameBoard[34];
-    cout << "\n\t" << "-------------------------";
-	cout << "\n\t" << GameBoard[35] << " | " << GameBoard[36] << " | " << GameBoard[37] << " | " << GameBoard[38] << " | " << GameBoard[39] << " | " << GameBoard[40] << " | " << GameBoard[41];
-    cout << "\n\t" << "-------------------------";
+    cout << "\n\t" << GameBoard[28] << " | " << GameBoard[29] << " | " << GameBoard[30] << " | " << GameBoard[31] << " | " << GameBoard[32] << " | " << GameBoard[33] << " | " << GameBoard[34];
+    	cout << "\n\t" << "-------------------------";
+    cout << "\n\t" << GameBoard[35] << " | " << GameBoard[36] << " | " << GameBoard[37] << " | " << GameBoard[38] << " | " << GameBoard[39] << " | " << GameBoard[40] << " | " << GameBoard[41];
+	 cout << "\n\t" << "-------------------------";
 }
 
 char conqueror(vector<char>& GameBoard)
