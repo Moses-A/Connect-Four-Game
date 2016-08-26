@@ -40,7 +40,6 @@ int main()
 	const int table = 71;
 	vector<char> GameBoard(table, EMPTY);
 	
-
 	directions(); // calls for the function directions
 	char peasant = 'X';
 	char droid = 'O';
@@ -50,7 +49,6 @@ int main()
 	{
 		cout << "\n\n\n Human The Turn Is Yours. Please Choose A Column To Insert Your Piece: ";
 		cin >> playerChoice;
-
 		playerDrop(GameBoard, playerChoice, peasant);
 		computerDrop(GameBoard, droid);
 		cout << "\n";
