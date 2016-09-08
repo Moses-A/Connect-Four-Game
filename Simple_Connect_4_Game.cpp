@@ -26,6 +26,7 @@ int m = 39;
 int n = 40;
 int o = 41;
 
+
 void directions();
 void connectBoard(vector<char>& GameBoard);
 char conqueror(vector<char>& GameBoard);
@@ -33,6 +34,7 @@ void playerHuman(vector<char>& GameBoard);
 void playerDrop(vector<char> & GameBoard, char playerChoice, char peasant);
 void computerDrop(vector<char>& GameBoard, char droid);
 void Winner(char conqueror, char peasant, char droid);
+
 
 int main()
 {	
@@ -104,6 +106,7 @@ void playerDrop(vector<char> & GameBoard, char playerChoice, char peasant)
 
 void computerDrop(vector<char>& GameBoard, char droid)
 {
+	
 int randomNumber;
 	srand(static_cast<unsigned int>(time(0)));  //seed random number generator
 	randomNumber = rand() % 7 + 0;         // random number between 1 and 10
